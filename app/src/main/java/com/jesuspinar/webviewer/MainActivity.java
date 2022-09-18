@@ -19,14 +19,16 @@ public class MainActivity extends AppCompatActivity {
         //Default url
         webView.loadUrl(HOME_WEB);
 
-
-
     }
     //Go back action
     @Override
     public void onBackPressed(){
-        if(webView.canGoBack()) webView.goBack();
-        super.onBackPressed();
+        if(webView.canGoBack()) {
+            webView.goBack();
+        }
+        else{
+            super.onBackPressed();
+        }
     }
 
 }
